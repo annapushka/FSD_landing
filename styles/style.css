@@ -1,0 +1,187 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.hero-section {
+  background-image: url("../images/building.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 720px;
+  margin: 0;
+  position: relative;
+}
+.hero-section::after {
+  content: "";
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  height: calc(100% - 100px);
+  width: 1px;
+  background: linear-gradient(90deg, #D9E3E3 50%, rgba(217, 227, 227, 0) 103.88%);
+}
+.hero-section__context {
+  max-width: 1440px;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hero-section__context .title-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 609px;
+  padding-bottom: 65px;
+  padding-left: 120px;
+}
+.hero-section__context .title-card__text {
+  color: #152F35;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  padding: 0.5em 0;
+  margin-bottom: 2rem;
+}
+.hero-section__context .title-card__btn {
+  width: 260px;
+  padding: 20px 50px;
+  text-decoration: none;
+  background: #F7FF91;
+  color: #202828;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.hero-section__context .title-card__btn:hover {
+  background: #202828;
+  color: #F7FF91;
+}
+.hero-section__context .title-card__btn:focus {
+  background: #152F35;
+  color: #F7FF91;
+}
+.hero-section__context .title-card__title {
+  text-transform: uppercase;
+  color: #152F35;
+  font-size: 3em;
+  text-align: right;
+  position: relative;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgb(21, 47, 53);
+}
+.hero-section__context .title-card__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0.65em;
+  right: 6.1em;
+  width: 4em;
+  height: 0.8em;
+  background-image: url("../images/o_yellow.svg");
+  background-repeat: no-repeat;
+}
+.hero-section__context .title-card__title_yellow {
+  color: #F7FF91;
+}
+
+.who-we-are {
+  background-color: #D9E3E3;
+  padding: 5rem 0;
+}
+.who-we-are__wrapper {
+  max-width: 1440px;
+  height: 500px;
+  padding: 0 120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.who-we-are .help-card {
+  border: 1px solid rgb(21, 47, 53);
+  width: 500px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 16px;
+  text-align: left;
+}
+.who-we-are .help-card__img {
+  border-radius: 16px;
+  margin: 33px;
+  max-width: 100%;
+}
+.who-we-are .help-card__title {
+  padding: 0 33px;
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 150%;
+  color: #202828;
+}
+.who-we-are .help-card__text {
+  padding: 15px 33px 45px 33px;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #202828;
+}
+.who-we-are .skill-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+}
+.who-we-are .skill-cards .skill-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+.who-we-are .skill-cards .skill-card__text {
+  border-left: 2px solid rgb(32, 40, 40);
+  padding: 0 10px;
+}
+.who-we-are .skill-cards .skill-card__text h3 {
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1.9em;
+  color: #000000;
+}
+.who-we-are .skill-cards .skill-card__text p {
+  font-size: 0.875em;
+  line-height: 150%;
+}
+.who-we-are .skill-cards .skill-card__img {
+  padding: 0 28px;
+  max-height: 90px;
+  margin: 0 auto;
+}
+.who-we-are .skill-cards .skill-card_reverse .skill-card__text {
+  border-left: none;
+  border-right: 2px solid rgb(32, 40, 40);
+  text-align: right;
+}/*# sourceMappingURL=style.css.map */
