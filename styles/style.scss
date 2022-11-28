@@ -20,13 +20,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: $lightGrey;
 }
 
 h1,
 h2,
 h3,
+ul,
+li,
 p {
     margin: 0;
+    padding: 0;
 }
 
 .hero-section {
@@ -54,79 +58,88 @@ p {
         height: 100%;
         margin: 0 auto;
     }
-}
 
-.hero-section__context .title-card {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 609px;
-    padding-bottom: 65px;
-    padding-left: 120px;
+    .hero-section__context .title-card {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 609px;
+        padding-bottom: 65px;
+        padding-left: 120px;
 
-    &__text {
-        color: $textDark;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1em;
-        line-height: 150%;
-        letter-spacing: 0.01em;
-        padding: 0.5em 0;
-        margin-bottom: 2rem;
-    }
-
-    &__btn {
-        width: 260px;
-        padding: 20px 50px;
-        text-decoration: none;
-        background: $lightYellow;
-        color: $textBlack;
-        border-radius: 20px;
-        font-weight: 700;
-        letter-spacing: 0.01em;
-
-        &:hover {
-            background: $textBlack;
-            color: $lightYellow;
+        &__text {
+            color: $textDark;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            padding: 0.5em 0;
+            margin-bottom: 2rem;
         }
 
-        &:focus {
-            background: $textDark;
-            color: $lightYellow;
-        }
-    }
+        &__btn {
+            width: 260px;
+            padding: 20px 50px;
+            text-decoration: none;
+            background: $lightYellow;
+            color: $textBlack;
+            border-radius: 20px;
+            font-weight: 700;
+            letter-spacing: 0.01em;
 
-    &__title {
-        text-transform: uppercase;
-        color: $textDark;
-        font-size: 3em;
-        text-align: right;
-        position: relative;
-        padding-bottom: 0.5em;
-        border-bottom: 1px solid rgba(21, 47, 53, 1);
+            &:hover {
+                background: $textBlack;
+                color: $lightYellow;
+            }
 
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 0.65em;
-            right: 6.1em;
-            width: 4em;
-            height: 0.8em;
-            background-image: url('../images/o_yellow.svg');
-            background-repeat: no-repeat;
+            &:focus {
+                background: $textDark;
+                color: $lightYellow;
+            }
         }
 
-        &_yellow {
-            color: $lightYellow;
+        &__title {
+            text-transform: uppercase;
+            color: $textDark;
+            font-size: 3em;
+            text-align: right;
+            position: relative;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid rgba(21, 47, 53, 1);
+
+            &_yellow {
+                color: $lightYellow;
+            }
+
+            &_yellow-O {
+                display: inline-block;
+                width: 175px;
+                height: 0.75em;
+                border: 4px solid $lightYellow;
+                border-radius: 21px;
+            }
         }
-
-
     }
 }
 
 .who-we-are {
-    background-color: $lightGrey;
     padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 462px;
+        height: 470px;
+        right: -100px;
+        top: -55px;
+        background: $lightYellow;
+        opacity: 0.3;
+        filter: blur(178.5px);
+        z-index: -1;
+    }
 
     &__wrapper {
         max-width: 1440px;
@@ -135,6 +148,7 @@ p {
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 2fr;
+        position: relative;
     }
 
     .help-card {
@@ -176,6 +190,7 @@ p {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        align-items: center;
         margin: 0 auto;
         position: relative;
 
@@ -184,8 +199,8 @@ p {
             grid-template-columns: repeat(2, 1fr);
             justify-content: center;
             align-items: center;
-            width: 500px;
-            
+            width: 80%;
+
 
             &__text {
                 border-left: 2px solid rgba(32, 40, 40, 1);
@@ -205,9 +220,10 @@ p {
             }
 
             &__img {
-                padding: 0 28px;
+                display: flex;
+                justify-content: end;
                 max-height: 90px;
-                margin: 0 auto;
+                padding: 0 25px;
             }
 
 
@@ -218,6 +234,195 @@ p {
                     border-right: 2px solid rgba(32, 40, 40, 1);
                     text-align: right;
                 }
+
+                .skill-card__img {
+                    justify-content: start;
+                }
+            }
+        }
+    }
+}
+
+
+.services {
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 462px;
+        height: 470px;
+        left: -100px;
+        top: 250px;
+        background: $lightYellow;
+        opacity: 0.3;
+        filter: blur(178.5px);
+        z-index: -1;
+    }
+
+
+    &__wrapper {
+        max-width: 1440px;
+        padding: 0 120px;
+        margin: 0 auto;
+
+    }
+
+    .services-title {
+        background-image: url('/images/dg_geometry.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 250px;
+
+        h2 {
+            font-weight: 600;
+            font-size: 2.75em;
+            line-height: 170%;
+            letter-spacing: -0.02em;
+            color: $textBlack;
+            max-width: 480px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 1.25em;
+            letter-spacing: 0.01em;
+            color: $textBlack;
+            max-width: 480px;
+            padding-bottom: 2.5rem;
+        }
+    }
+
+    .services-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+
+        .services-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid $textDark;
+            border-radius: 2.25rem;
+            height: 520px;
+            flex-grow: 0.5;
+            flex-shrink: 0;
+            flex-basis: 350px;
+            padding-top: 1.2rem;
+
+            &__img {
+                margin: 0 auto;
+
+                img {
+                    border-radius: 16px;
+                    max-width: 100%;
+
+                }
+            }
+
+            &__text {
+                padding: 0 43px;
+                width: 100%;
+
+                h3 {
+                    font-weight: 600;
+                    font-size: 1.5em;
+                    line-height: 250%;
+                    color: $textDark;
+                }
+
+                ul {
+                    padding-left: 25px;
+
+                    li {
+                        line-height: 150%;
+                        letter-spacing: 0.02em;
+                        color: $textBlack;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-form {
+
+    &__wrapper {
+        max-width: 1440px;
+        padding: 0 120px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 6.25em;
+        line-height: 126%;
+        letter-spacing: -0.03em;
+        color: $textDark;
+        padding-bottom: 4rem;
+    }
+
+    &__title-O {
+        display: inline-block;
+        width: 163px;
+        height: 0.55em;
+        border: 10px solid $textDark;
+        border-radius: 138px;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .form-groups {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .form-group {
+            padding: 10px;
+            border: 1px solid $textDark;
+            border-radius: 12px;
+            width: 288px;
+            height: 45px;
+            position: relative;
+            margin: 0.75rem 0;
+
+            &__label {
+                position: absolute;
+                top: -9px;
+                left: 20px;
+                padding: 0 10px;
+                background-color: $lightGrey;
+                font-family: 'Inter', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 0.875em;
+                line-height: 1em;
+                letter-spacing: 0.02em;
+                color: $textDark;
+            }
+
+            &__input {
+                border: none;
+                background-color: $lightGrey;
+                font-family: 'Inter', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 0.875em;
+                line-height: 1em;
+                letter-spacing: 0.02em;
+                color: $textDark;
+                outline: none;
             }
         }
     }
