@@ -26,11 +26,33 @@ body {
 h1,
 h2,
 h3,
+h4,
 ul,
 li,
 p {
     margin: 0;
     padding: 0;
+}
+
+.btn {
+    width: 260px;
+    padding: 20px 50px;
+    background: $lightYellow;
+    color: $textBlack;
+    border-radius: 20px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+
+    &:hover {
+        background: $textBlack;
+        color: $lightYellow;
+    }
+
+    &:focus {
+        background: $textDark;
+        color: $lightYellow;
+    }
 }
 
 .hero-section {
@@ -79,24 +101,7 @@ p {
         }
 
         &__btn {
-            width: 260px;
-            padding: 20px 50px;
             text-decoration: none;
-            background: $lightYellow;
-            color: $textBlack;
-            border-radius: 20px;
-            font-weight: 700;
-            letter-spacing: 0.01em;
-
-            &:hover {
-                background: $textBlack;
-                color: $lightYellow;
-            }
-
-            &:focus {
-                background: $textDark;
-                color: $lightYellow;
-            }
         }
 
         &__title {
@@ -354,6 +359,21 @@ p {
 }
 
 .contact-form {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 462px;
+        height: 570px;
+        right: -100px;
+        bottom: -200px;
+        background: $lightYellow;
+        opacity: 0.3;
+        filter: blur(178.5px);
+        z-index: -1;
+    }
 
     &__wrapper {
         max-width: 1440px;
@@ -382,6 +402,38 @@ p {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
+        &__body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__btn {
+            border: none;
+            background: $textDark;
+            color: $lightYellow;
+            margin: 1rem 0 0.3rem 0;
+
+            &:hover {
+                background: $lightYellow;
+                color: $textBlack;
+            }
+        }
+
+        &__checkbox {
+            accent-color: $textDark;
+            outline: none;
+            margin: 0.3rem;
+        }
+
+        &__checkbox-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875em;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+            color: $textDark;
+            margin: 0.2rem 0 7rem 1rem;
+        }
+
         .form-groups {
             display: flex;
             flex-direction: row;
@@ -392,10 +444,11 @@ p {
             padding: 10px;
             border: 1px solid $textDark;
             border-radius: 12px;
-            width: 288px;
+            min-width: 288px;
             height: 45px;
             position: relative;
             margin: 0.75rem 0;
+            height: fit-content;
 
             &__label {
                 position: absolute;
@@ -414,16 +467,104 @@ p {
 
             &__input {
                 border: none;
+                outline: none;
                 background-color: $lightGrey;
                 font-family: 'Inter', sans-serif;
-                font-style: normal;
-                font-weight: 400;
                 font-size: 0.875em;
-                line-height: 1em;
-                letter-spacing: 0.02em;
-                color: $textDark;
-                outline: none;
+                padding-left: 0.5rem;
+
+                &::placeholder {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 0.875em;
+                    line-height: 1em;
+                    letter-spacing: 0.02em;
+                    color: $textDark;
+                }
+            }
+
+            .__textarea {
+                min-height: 137px;
+                width: 100%;
+                resize: vertical;
+                padding: 0.5rem;
             }
         }
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-bottom: 20rem;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 5%;
+            left: 40%;
+            height: 500px;
+            width: 550px;
+            background-image: url('/images/vector.svg');
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 117%;
+            color: $textBlack;
+            text-align: right;
+        }
+    }
+}
+
+.footer {
+    border-top: 1px solid $textDark;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 462px;
+        height: 570px;
+        right: -100px;
+        bottom: 15px;
+        background: $lightYellow;
+        opacity: 0.3;
+        filter: blur(178.5px);
+        z-index: -1;
+    }
+
+    &__wrapper {
+        max-width: 1440px;
+        padding: 65px 120px 75px 120px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
+
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: $textDark;
+
+    }
+
+    &__com {
+        h4 {
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+    }
+
+    &__contacts-item{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
     }
 }
