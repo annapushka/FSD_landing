@@ -236,7 +236,7 @@ p {
   margin: 0 auto;
 }
 .services .services-title {
-  background-image: url("/images/dg_geometry.svg");
+  background-image: url("../images/dg_geometry.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -457,7 +457,7 @@ p {
   left: 40%;
   height: 500px;
   width: 550px;
-  background-image: url("/images/vector.svg");
+  background-image: url("../images/vector.svg");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -601,7 +601,7 @@ p {
     padding-right: 3rem;
   }
   .hero-section {
-    background-image: url(../images/building-mob.jpg);
+    background-image: url("../images/building-mob.jpg");
     background-size: cover;
     height: 100vh;
   }
@@ -753,7 +753,7 @@ p {
     height: 60%;
   }
   .hero-section {
-    background-image: url(../images/building-mob.jpg);
+    background-image: url("../images/building-mob.jpg");
     background-size: cover;
     height: 100vh;
   }
@@ -824,6 +824,6 @@ p {
     left: 45%;
     height: 200px;
     width: 200px;
-    background-image: url("/images/vector-mob.png");
+    background-image: url("../images/vector-mob.png");
   }
 }/*# sourceMappingURL=style.css.map */
