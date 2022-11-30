@@ -10,9 +10,9 @@
 
 [Сlick me](https://annapushka.github.io/FSD_landing/)
 <p>
-<img src="images/readme1.jpg" alt="result" width="500px"/><br>
-<img src="images/readme2.jpg" alt="result" width="250px"/>
-<img src="images/readme3.jpg" alt="result" width="250px"/>
+<img src="images/result1.jpg" alt="result" width="100%"/><br>
+<img src="images/result2.jpg" alt="result" width="49%"/>
+<img src="images/result3.jpg" alt="result" width="49%"/>
 </p>
 
 
