@@ -11,8 +11,8 @@
 [Сlick me](https://annapushka.github.io/FSD_landing/)
 <p>
 <img src="images/result1.jpg" alt="result" width="100%"/><br>
-<img src="images/result2.jpg" alt="result" width="49%"/>
-<img src="images/result3.jpg" alt="result" width="49%"/>
+<img src="images/result2.jpg" alt="result" width="49.5%"/>
+<img src="images/result3.jpg" alt="result" width="49.5%"/>
 </p>
 
 
